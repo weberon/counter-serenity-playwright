@@ -20,9 +20,6 @@ const Counter = () => {
                     -
                 </button>
             </div>
-            <form>
-                <input type="text" name="example" id="example" />
-            </form>
         </div>
     )
 }
