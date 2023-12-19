@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-ct": "playwright test -c playwright-ct.config.js"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +35,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.40.1",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.4",
+
+    "@serenity-js/assertions": "^3.14.1",
+    "@serenity-js/console-reporter": "^3.14.1",
+    "@serenity-js/core": "^3.14.1",
+    "@serenity-js/playwright": "^3.14.1",
+    "@serenity-js/playwright-test": "^3.14.1",
+    "@serenity-js/rest": "^3.14.1",
+    "@serenity-js/serenity-bdd": "^3.14.1",
+    "@serenity-js/web": "^3.14.1"
   }
 }
