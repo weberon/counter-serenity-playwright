@@ -18,13 +18,6 @@ export const logBrowserInformation = (actor) => {
 }
 
 export const incrementCounterAndEnsureValueChanged = (actor) => {
-    /* const counterNotes = Notepad.with({
-        info: "Counter Notes",
-        counterVal: undefined,
-        initialCounterVal: undefined,
-        expectedVal: undefined,
-        misc: undefined
-      }); */
       actor.whoCan(TakeNotes.using(Notepad.empty()));
       return Task.where(
         d`#actor increments Counter & Ensures that Counter is incremented`,

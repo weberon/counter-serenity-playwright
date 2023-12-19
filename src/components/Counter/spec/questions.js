@@ -26,7 +26,6 @@ export const computeExpectedCounterValue = (valueToAddOrSubtract) => {
     return Text.of(counterValue()).as((v) => {
         const currentValue = parseInt(v, 10);
         const expectedValue = currentValue + valueToAddOrSubtract;
-        console.log({currentValue, valueToAddOrSubtract, expectedValue});
         return expectedValue.toString();
     })
 }

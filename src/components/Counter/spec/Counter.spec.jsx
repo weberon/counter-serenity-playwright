@@ -59,30 +59,40 @@ describe('Counter App', () => {
             '-1'
         )
     })
+
+    it('Increments Twice Counter Increases twice', async({mount, actor}) => {
+        
+        PageElement.from(await mount(
+            <Counter  />,
+        )).describedAs('Counter');
+
+        await actor.attemptsTo(
+            logBrowserInformation(actor),
+            incrementCounterAndEnsureValueChanged(actor),
+            incrementCounterAndEnsureValueChanged(actor),
+        )
+        
+        Ensure.that(
+            textOfCounterValue(),
+            '2'
+        )
+    })
+
+    it('Decrements Twice Counter decreases twice', async({mount, actor}) => {
+        
+        PageElement.from(await mount(
+            <Counter  />,
+        )).describedAs('Counter');
+
+        await actor.attemptsTo(
+            logBrowserInformation(actor),
+            decrementCounterAndEnsureValueChanged(actor),
+            decrementCounterAndEnsureValueChanged(actor),
+        )
+        
+        Ensure.that(
+            textOfCounterValue(),
+            '-2'
+        )
+    })
 })
-
-/*
- SerenityCounter.enterExampleValue("Hello Joshua")
-        const exampleValue = SerenityCounter.getExampleValue();
-        console.log({exampleValue});
-
-        let txt = (await counterComponent.answeredBy(actor)).toString
-        console.log({txt});
-        //const counteVal = await counterValue.text().of(counterComponent);
-
-        const counterValue = await SerenityCounter.counterValue().of(counterComponent);
-        console.log({counterValue});
-        
-        
-        //console.log('1.0.2',{counterValue: counterValue.text().of(counterComponent)});
-        console.log({browserVersion});
-        console.log({component: SerenityCounter.component().of(counterComponent)});
-
-        /* await actor.attemptsTo(
-            SerenityCounter.isCounterValue(counterComponent, "0")
-        ) */
-        /* Ensure.eventually(
-            SerenityCounter.counterValue().of(counterComponent),
-            equals("5"),
-        ) */
-/**/
