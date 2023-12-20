@@ -37,7 +37,7 @@ module.exports = defineConfig({
     /* Port to use for Playwright component endpoint. */
     ctPort: 3100,
 
-    headless: false,
+    headless: true,
   },
 
   /* Configure projects for major browsers */
