@@ -5,5 +5,6 @@
 
 ### Steps
 1. `npm install`
-2. `npm run test-ct`
+2. `npx playwright install`
+3. `npm run test-ct`
 
