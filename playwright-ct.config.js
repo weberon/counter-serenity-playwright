@@ -5,7 +5,7 @@ const { defineConfig, devices } = require('@playwright/experimental-ct-react');
  * @see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './src/components', // /src/components
+  testDir: './src/components',
   /* The base directory, relative to the config file, for snapshot files created with toMatchSnapshot and toHaveScreenshot. */
   snapshotDir: './__snapshots__',
   /* Maximum time one test can run for. */
